@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cruz Campbell — The Scouting Report</title>
+<meta name="description" content="A creative application component for TCU Admissions from Cruz Campbell, Santa Fe Christian, Class of 2027.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ STAGE 1: THE PUZZLE ============ -->
+<div id="puzzleStage">
+  <section class="home-hero">
+    <div class="wrap">
+      <div>
+        <span class="mystery">CONFIDENTIAL · FOR ADMISSIONS EYES ONLY</span>
+        <p class="eyebrow">A creative component for TCU</p>
+        <h1>You've been<span>sent a file.</span></h1>
+        <p class="lede">Someone slid a scouting report across your desk. The prospect's name is blacked out. Declassify all five lines and see who it is.</p>
+        <p class="lede" style="margin-top:10px">Takes about a minute. No tackling required.</p>
+        <p class="skip"><button class="linkish" id="skipPuzzle" type="button">Short on time? Skip straight to the reveal →</button></p>
+      </div>
+
+      <div>
+        <div class="file" id="file">
+          <span class="tab">FILE 2027-TCU</span>
+          <span class="conf">TOP SECRET*</span>
+          <h2>SCOUTING REPORT</h2>
+          <p class="prospect" aria-label="Prospect name, hidden until clues are revealed"></p>
+          <div class="meta"><span>CLASS OF 2027</span><span>CARLSBAD, CA</span></div>
+
+          <!-- TODO: rewrite each data-text in your own words. Keep them short and true. -->
+          <button class="clue" type="button" aria-expanded="false" data-text="Worked the Toyota Carlsbad car wash where nobody was his age. Learned the whole crew anyway. Some still text him.">
+            <span class="label">CLUE 01 · PEOPLE</span>
+            <span class="redact">████████ ████ ███████ ██████ ███████</span>
+          </button>
+          <button class="clue" type="button" aria-expanded="false" data-text="Three broken collarbones: twice left, once right. Back on the field every single time.">
+            <span class="label">CLUE 02 · GRIT</span>
+            <span class="redact">██████ ██ ███ ████ ██████ ███ ████ ███████</span>
+          </button>
+          <button class="clue" type="button" aria-expanded="false" data-text="Six months ago he wrote down one goal: win an Open Division title. SFC just qualified for the first time in school history.">
+            <span class="label">CLUE 03 · DRIVE</span>
+            <span class="redact">████ █ ████ ███████ ███ ████ ██ ████</span>
+          </button>
+          <button class="clue" type="button" aria-expanded="false" data-text="Carlsbad, California. Rooted. Close-knit. Breathtaking.">
+            <span class="label">CLUE 04 · HOME BASE</span>
+            <span class="redact">██████████ ████████ ████ ███ ██████</span>
+          </button>
+          <button class="clue" type="button" aria-expanded="false" data-text="#1, wide receiver and defensive back, team captain. Lost a state semifinal and says it gave him a fire he'd never felt.">
+            <span class="label">CLUE 05 · THE FIELD</span>
+            <span class="redact">████ ██ █████████ ████████ ██ ██████</span>
+          </button>
+
+          <div class="file-progress"><span class="count">0/5 declassified</span><span class="bar"><i></i></span></div>
+          <div class="stamp-approved" aria-hidden="true"><span>APPROVED</span></div>
+        </div>
+        <p class="prompt">Tap a black bar to declassify it.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ STAGE 2: THE REVEAL ============ -->
+<div id="reveal" class="hidden">
+  <section class="reveal-stage">
+    <div class="speedlines"></div>
+    <div class="wrap">
+      <div class="runner">
+        <!-- PHOTO 1: your best "ready to run" shot — action photo or jersey photo. Portrait works best. -->
+        <figure class="slot" data-img="images/hero-ready.jpg" data-label="Hero: ready to run" data-ratio="4/5" data-alt="Cruz Campbell ready to run through campus"></figure>
+      </div>
+      <div>
+        <span class="unlocked-tag">★ FILE DECLASSIFIED</span>
+        <p class="eyebrow" style="color:var(--lilac)">Prospect identified</p>
+        <h1>Hi, I'm <em>Cruz.</em></h1>
+        <p class="lede">Santa Fe Christian senior, Carlsbad kid, team captain, and a guy who really wants to run out of the tunnel as a Horned Frog. Thanks for opening the file.</p>
+        <ul class="facts">
+          <li><small>SCHOOL</small>Santa Fe Christian, Class of 2027</li>
+          <li><small>HOMETOWN</small>Carlsbad, California</li>
+          <li><small>FOOTBALL</small>#1 · Wide Receiver / DB · Captain</li>
+          <li><small>INTENDED MAJOR</small>Finance + Real Estate (BBA)</li>
+          <li><small>GPA</small>3.77</li>
+          <li><small>MOTTO</small>BYOJ: Bring Your Own Juice</li>
+        </ul>
+        <div class="btn-row">
+          <a class="btn sun" href="story.html">Read my story</a>
+          <a class="btn light" href="why-tcu.html">Why TCU</a>
+        </div>
+        <p style="margin-top:18px;color:var(--lilac);font-size:.9rem"><span id="timeStat"></span> <button class="linkish" id="replay" type="button">Replay the file</button></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sand">
+    <div class="wrap split">
+      <div class="reveal-up">
+        <p class="eyebrow">I've been here before</p>
+        <h2>This isn't a first date with TCU.</h2>
+        <p class="lede">I've wanted to see TCU for as long as I can remember. My brother and I visited in winter 2022 and I loved it. I went back last month to tour again and catch up with friends there, and I fell in love with it all over again.</p>
+        <a class="btn" href="why-tcu.html">Here's why →</a>
+      </div>
+      <!-- PHOTO 2: you touring TCU a few years ago -->
+      <figure class="slot polaroid r reveal-up" data-img="images/campus-tour.jpg" data-label="Campus tour photo" data-ratio="3/4" data-alt="Cruz touring TCU's campus"><figcaption>TCU, winter 2022</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">Keep exploring</p>
+      <h2>Four ways to get to know me</h2>
+      <div class="grid g2 doors">
+        <a href="story.html"><div class="door beyond reveal-up"><span class="arrow">→</span><h3>My Story</h3><p>The timeline: where I started and what shaped me.</p></div></a>
+        <a href="carlsbad.html"><div class="door carlsbad reveal-up"><span class="arrow">→</span><h3>Carlsbad</h3><p>Postcards from the town that raised me.</p></div></a>
+        <a href="football.html"><div class="door football reveal-up"><span class="arrow">→</span><h3>Friday Nights</h3><p>The scoreboard, the seasons, and what football taught me.</p></div></a>
+        <a href="why-tcu.html"><div class="door tcu reveal-up"><span class="arrow">→</span><h3>Why TCU</h3><p>A letter to Admissions, with specifics.</p></div></a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/puzzle.js"></script>
+</body>
+</html>
